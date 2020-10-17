@@ -1,0 +1,21 @@
+.main
+	
+	.var
+		a
+		b
+	.end-var
+
+	BIPUSH 5
+	ISTORE a
+	BIPUSH 3
+	ISTORE b
+	ILOAD a
+	ILOAD b
+	ISUB
+	IFLT L1
+	ILOAD a
+	GOTO L2
+L1: ILOAD b
+L2: NOP
+
+.end-main

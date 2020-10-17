@@ -1,0 +1,49 @@
+.main
+
+	.var
+		a
+		b
+		c
+	.end-var
+
+	ILOAD c
+	
+	IFEQ L1
+
+	BIPUSH 1
+	ILOAD c
+	ISUB
+	IFEQ L2
+
+	BIPUSH 2
+	ILOAD c
+	ISUB
+	IFEQ L3
+
+	BIPUSH 3
+	ILOAD c
+	ISUB
+	IFEQ L4
+
+L1: ILOAD a
+	ILOAD b
+	IAND
+	GOTO L5
+
+L2: ILOAD a
+	ILOAD b
+	IOR
+	GOTO L5
+
+L3: ILOAD a
+	ILOAD b
+	IADD
+	GOTO L5
+
+L4: ILOAD a
+	ILOAD b
+	ISUB
+	GOTO L5
+
+L5: NOP
+.end-main

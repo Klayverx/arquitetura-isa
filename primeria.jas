@@ -1,0 +1,16 @@
+.main
+
+	.var
+		i
+		j
+		k
+	.end-var
+	
+	ILOAD j
+	ILOAD k
+	BIPUSH 4
+	IADD
+	IADD
+	ISTORE i
+
+.end-main
